@@ -41,13 +41,5 @@ echo "[install] Symlink the ClusterDuck-Protocol sub libraries from ${ARDUINO_LI
 cd ${ARDUINO_LIB_DIR}
 find $CDP_LIB_DIR -maxdepth 1 -mindepth 1 -type d -exec ln -sf {} \;
 
-#cd ${CDP_INSTALL_DIR} 
-#echo "[install] Copy ClusterDuck-Protocol into ${ARDUINO_LIB_DIR}..."
-#cp -R ./ClusterDuck-Protocol ${ARDUINO_LIB_DIR}
-
-#echo "[install] Copy ClusterDuck-Protocol/Libraries/* into ${ARDUINO_LIB_DIR}..."
-#cd ${ARDUINO_LIB_DIR}
-#cp -R ./ClusterDuck-Protocol/Libraries/* .
-
 echo "[install] ClusterDuck-Protocol installation done!"
 
