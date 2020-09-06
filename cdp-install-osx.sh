@@ -13,37 +13,38 @@ GITHUB_CDP_UPSTREAM_REPO="https://github.com/Code-and-Response/${PROJECT_NAME}.g
 
 if [ "$#" -ne 1 ]; then
     echo "[install] usage:
-        $0 <github_username> : installs ClusterDuck-Protocol sources
-        $0 --help            : shows installation pre-requistes"
+        $0 <github_username> : installs ${PROJECT_NAME} sources
+        $0 --help            : pre-installation steps"
     exit 1
 fi
 
 if [ $1 = "--help" ] || [ $1 = "-h" ] || [ $1 = "help" ]; then
     echo "[install] help:
 =========================
-    1. Download and install the Arduino IDE
-    ---------------------------------------
-    Follow instructions from https://www.arduino.cc/en/guide/macOSX
+    [1] Fork Repository:
+    Fork ${PROJECT_NAME} repository from github
+    https://github.com/Code-and-Response/ClusterDuck-Protocol
     
-    2. Install Silicon Labs USB to UART Bridge VCP Driver
-    -----------------------------------------------------
-    From http://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver_10_6.zip
-    Make sure Silicon Labs has the necessary security preferences. (go to System Preferences -> Security and Privacy -> General and allow Silicon Labs).
+    [2] Arduino IDE:
+    Download and install from https://www.arduino.cc/en/guide/macOSX
     
-    3. Install the ESP32 core Library
-    ---------------------------------
+    [3] Legacy CP210x USB to UART Bridge VCP Drivers:
+    Download http://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver_10_6.zip
+    *IMPORTANT* If the install gets stuck, go to System Preferences -> Security and Privacy -> General and allow Silicon Labs
+    This will grant permission for the Driver to access system files.
+    
+    [4] Install the ESP32 core Library:
     Open the Arduino IDE and go to [Preferences]. 
     In [Additional Boards Manager URLs] add the following string: 
     https://dl.espressif.com/dl/package_esp32_index.json,https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
     
-    4. Load the Heltec ESP32 Board to your Arduino IDE
-    --------------------------------------------------
+    [5] Load the Heltec ESP32 Boards:
     From  Arduino IDE menu, select [Tools] > [Board] > [Boards Manager]
     Search for "\""esp32"\"". You should see the "\""esp32 by Espressif Systems"\"" library. Install this library.
+    
+    [6] Close Arduiono IDE
 
-    5. Run the script
-    -----------------
-    $0 <github_username>
+    [7] Run script: $0 <github_username>
 =========================
     
     "
