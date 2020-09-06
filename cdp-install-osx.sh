@@ -12,8 +12,42 @@ GITHUB_CDP_REPO="git@github.com:${GITHUB_USERNAME}/${PROJECT_NAME}.git"
 GITHUB_CDP_UPSTREAM_REPO="https://github.com/Code-and-Response/${PROJECT_NAME}.git"
 
 if [ "$#" -ne 1 ]; then
-    echo "[install] USAGE: install.sh <github_username>"
+    echo "[install] usage:
+        $0 <github_username> : installs ClusterDuck-Protocol sources
+        $0 --help            : shows installation pre-requistes"
     exit 1
+fi
+
+if [ $1 = "--help" ] || [ $1 = "-h" ] || [ $1 = "help" ]; then
+    echo "[install] help:
+=========================
+    1. Download and install the Arduino IDE
+    ---------------------------------------
+    Follow instructions from https://www.arduino.cc/en/guide/macOSX
+    
+    2. Install Silicon Labs USB to UART Bridge VCP Driver
+    -----------------------------------------------------
+    From http://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver_10_6.zip
+    Make sure Silicon Labs has the necessary security preferences. (go to System Preferences -> Security and Privacy -> General and allow Silicon Labs).
+    
+    3. Install the ESP32 core Library
+    ---------------------------------
+    Open the Arduino IDE and go to [Preferences]. 
+    In [Additional Boards Manager URLs] add the following string: 
+    https://dl.espressif.com/dl/package_esp32_index.json,https://adafruit.github.io/arduino-board-index/package_adafruit_index.json
+    
+    4. Load the Heltec ESP32 Board to your Arduino IDE
+    --------------------------------------------------
+    From  Arduino IDE menu, select [Tools] > [Board] > [Boards Manager]
+    Search for "\""esp32"\"". You should see the "\""esp32 by Espressif Systems"\"" library. Install this library.
+
+    5. Run the script
+    -----------------
+    $0 <github_username>
+=========================
+    
+    "
+    exit 0
 fi
 
 if [ ! -d "$ARDUINO_APP_DIR" ]; then
