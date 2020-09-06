@@ -13,11 +13,11 @@ Download `http://www.silabs.com/Support%20Documents/Software/Mac_OSX_VCP_Driver_
 
 **IMPORTANT**: If the install gets stuck, go to [System Preferences] -> [Security and Privacy] -> [General]
 and allow Silicon Labs. This will grant permission for the Driver to access system files.
-### Install the ESP32 core Library:
+### Install the ESP32 core Library
 Open the Arduino IDE and go to [Preferences]. 
 In [Additional Boards Manager URLs] add the following string: 
 `https://dl.espressif.com/dl/package_esp32_index.json,https://adafruit.github.io/arduino-board-index/package_adafruit_index.json`
-### Load the Heltec ESP32 Boards:
+### Load the Heltec ESP32 Boards
 1. From  Arduino IDE menu, select [Tools] > [Board] > [Boards Manager]
 Search for "esp32". You should see the "esp32 by Espressif Systems" library. Install this library.
 2. Close Arduiono IDE
