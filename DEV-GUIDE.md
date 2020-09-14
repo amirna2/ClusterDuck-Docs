@@ -44,3 +44,12 @@ ClusterDuck Project Root
     └── index.h                 ClusterDuck Emergency Portal web page
 ```
 
+### High level component diagram
+
+![cdp-arch](https://github.com/amirna2/ClusterDuck-Docs/blob/master/assets/cdp-arch.png)
+
+### External APIs
+
+### Simple DuckLink Example
+
+### Coding Style And Design Principles
