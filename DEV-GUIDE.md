@@ -48,13 +48,15 @@ ClusterDuck Project Root
 
 ![cdp-arch](https://github.com/amirna2/ClusterDuck-Docs/blob/master/assets/cdp-arch.png)
 
+`TODO` Brief description of the components here...
+
 ### External APIs
-A description of the external APIs
+`TODO` A description of the external APIs
 
 ### Simple DuckLink Example
-A step by step describing the Duck Builder interface
+`TODO` A step by step describing the Duck Builder interface
 
 ### Coding Style And Design Principles
-Coding style for the project: loosely inspired by https://google.github.io/styleguide/cppguide.html
-The Design principles are mostly around the notion of Single Responsibility and Separation of Concerns
+`TODO` Coding style for the project: loosely inspired by https://google.github.io/styleguide/cppguide.html
+`TODO` The Design principles are mostly around the notion of Single Responsibility and Separation of Concerns
 
