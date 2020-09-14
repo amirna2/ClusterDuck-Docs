@@ -13,7 +13,7 @@ The ClusterDuck Protocol (CDP) was created by [Project OWL] to be an easy to use
 The source code repository is accessible [here]. 
 
 #### Audience
-This document is indented for anyone wanting to contribute to the development of the ClusterDuck Protocol or wanting to gain a deeper understand when developing the firmware that powers the duck devices that form the DuckCluster Network.
+This document is indented for anyone wanting to contribute to the development of the ClusterDuck Protocol or wanting to gain a deeper understanding when developing the firmware that powers the duck devices that form the DuckCluster Network.
 It provides a detailed design and functional description of the protocol, its current capabilities and limitations.
 
 
